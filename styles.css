@@ -2,6 +2,8 @@
   --bg: #ffffff;
   --accent: #2d5a27;
   --muted: #f7f7f7;
+  --field-top: #7cc36a; /* verde claro */
+  --field-bottom: #4e9a3f; /* verde oscuro */
   --modal-bg: rgba(0,0,0,0.5);
   --focus: 0 0 0 3px rgba(45,90,39,0.12);
   --radius: 10px;
@@ -24,30 +26,54 @@ body{
 
 header{ text-align:center; margin-bottom:18px; color:var(--accent) }
 
+/* Campo de flores: fondo verde */
 main.garden{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(120px, 1fr));
   gap:var(--gap);
   width:90%;
   max-width:var(--max-width);
+  background: linear-gradient(180deg, var(--field-top) 0%, var(--field-bottom) 100%);
+  padding:32px;
+  border-radius:18px;
+  box-shadow: 0 8px 30px rgba(46,125,50,0.12);
+  align-items:start;
+  min-height:280px; /* apariencia de pradera */
 }
 
 /* Flower buttons */
 .flower {
   appearance:none;
-  border: 2px solid rgba(45,90,39,0.07);
-  background:linear-gradient(180deg,#fff 0%, #f1fff2 100%);
-  padding:18px;
-  border-radius:12px;
-  min-height:96px;
+  border: none;
+  background: rgba(255,255,255,0.92); /* card claro sobre el verde */
+  padding:14px 12px 28px 12px; /* espacio extra para "tallo" visual */
+  border-radius:50%;
+  min-height:88px;
+  width:88px;
   display:flex;
   align-items:center;
   justify-content:center;
   cursor:pointer;
   font-size:1.1rem;
   transition: transform .12s ease, box-shadow .12s ease;
+  margin:auto; /* centrar dentro de la celda */
+  position:relative;
 }
-.flower:hover{ transform: translateY(-4px); box-shadow: 0 6px 18px rgba(0,0,0,0.06) }
+.flower:hover{ transform: translateY(-6px) scale(1.03); box-shadow: 0 8px 20px rgba(0,0,0,0.12) }
+
+/* Tallito (pseudo-elemento) */
+.flower::after{
+  content: '';
+  position:absolute;
+  bottom:-18px;
+  left:50%;
+  transform:translateX(-50%);
+  width:6px;
+  height:22px;
+  background: linear-gradient(180deg,#3b7d2a,#2e6b24);
+  border-radius:3px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
 
 .flower:focus{ outline:none; box-shadow:var(--focus) }
 .flower .icon{ font-size:1.8rem; display:block; }

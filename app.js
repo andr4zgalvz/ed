@@ -20,6 +20,9 @@ if (!garden || !modal || !modalText || !closeBtn) {
 } else {
   let lastFocused = null;
 
+  /* Limpiar el contenedor por si ya había contenido */
+  garden.innerHTML = '';
+
   /* Crear flores (botones) */
   items.forEach(item => {
     const btn = document.createElement('button');
