@@ -19,7 +19,6 @@ header {
   color: #2d5a27;
 }
 
-/* Grilla del campo */
 .garden {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
@@ -30,7 +29,6 @@ header {
   margin-bottom: 2rem;
 }
 
-/* Estilos de cada flor */
 .flower {
   font-size: 3rem;
   text-align: center;
@@ -44,7 +42,6 @@ header {
   filter: drop-shadow(0 5px 5px rgba(0,0,0,0.15));
 }
 
-/* Modal */
 .modal {
   position: fixed;
   top: 0;
