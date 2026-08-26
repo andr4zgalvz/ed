@@ -49,7 +49,6 @@ items.forEach((item) => {
   garden.appendChild(flower);
 });
 
-// Abrir el modal con los datos
 function openModal(data) {
   modalText.textContent = data.text;
 
@@ -64,7 +63,6 @@ function openModal(data) {
   modal.classList.remove("hidden");
 }
 
-// Cerrar el modal
 closeBtn.addEventListener("click", () => {
   modal.classList.add("hidden");
 });
