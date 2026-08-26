@@ -1,5 +1,3 @@
-// Configura aquí tus fotos y frases
-const items = [
   {
     icon: "🌻",
     text: "Eres una persona con una luz increíble.",
