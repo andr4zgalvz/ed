@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campo de Flores</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Toca una flor 🌸</h1>
+    <p>Descubre los mensajes y fotos ocultos</p>
+  </header>
+
+  <!-- Contenedor del campo -->
+  <main id="garden" class="garden"></main>
+
+  <!-- Ventana emergente (Modal) -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-btn" class="close-btn">&times;</span>
+      <img id="modal-img" src="" alt="Imagen de la flor" class="hidden">
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
